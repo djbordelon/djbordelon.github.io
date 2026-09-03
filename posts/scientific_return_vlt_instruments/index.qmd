@@ -24,17 +24,17 @@ Papers and citation counts "generated" by each instrument for each year of opera
 
 My roles in this project were
 
--   stewardship of the database,
--   conceptual discussion and planning,
--   querying and aggregation of the data, and
--   exploratory visualizations.
+- stewardship of the database,
+- conceptual discussion and planning,
+- querying and aggregation of the data, and
+- exploratory visualizations.
 
 The findings were used by facility administrators to make decisions about upgrades. Findings included
 
--   instrument demand associated with *successful* (i.e., publication-producing) proposals;
--   characterization of publication behavior over time for most instruments;
--   quantitative performance of instruments relative to one another and to their year of launch; and
--   which instruments had passed their prime in terms of producing impact.
+- instrument demand associated with *successful* (i.e., publication-producing) proposals;
+- characterization of publication behavior over time for most instruments;
+- quantitative performance of instruments relative to one another and to their year of launch; and
+- which instruments had passed their prime in terms of producing impact.
 
 Here is the abstract for the paper which we published in the [ESO *Messenger*](https://www.eso.org/sci/publications/messenger/):
 

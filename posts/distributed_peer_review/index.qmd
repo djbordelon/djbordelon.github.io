@@ -20,8 +20,8 @@ Study design from the *Nature Astronomy* paper.
 
 My roles in this project were
 
--   general project ideation and planning,
--   design, development, and deployment of the web app used for reviews.[^1]
+- general project ideation and planning,
+- design, development, and deployment of the web app used for reviews.[^1]
 
 [^1]: We used [CherryPy](https://docs.cherrypy.dev/en/latest/) and [SQLAlchemy](https://www.sqlalchemy.org/) with a LAM stack. GitHub repository for the reviews web app: <https://github.com/wkerzendorf/deepthought_opc>
 

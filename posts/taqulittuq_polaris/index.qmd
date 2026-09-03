@@ -97,14 +97,14 @@ Bessels pursued a broad and ambitious program of study, summarized here:
 
 [^4]: This table is based on @natureScientificResultsPolaris1874; also includes information from @natureResultsPolarisArctic1875.
 
-| Field of study     | Instrumentation                                                                                                                                                                                    | Findings/notes                                                                                                                                                      |
-|-----------------|------------------------------|-------------------------|
-| Astronomy          | Würdemann transit; Gambey sextants; box and pocket chronometers; pendulum                                                                                                                          | latitude and longitude of transit station; most records lost                                                                                                        |
-| Geology            |                                                                                                                                                                                                    | rising of land deduced from fossils;[^5] south-to-north geologic drift in Greenland; Davis Strait once flowed in the opposite direction; most geologic samples lost |
-| Magnetism          | unifilar declinometer; dip circle with Lloyd's needles; theodolite; prismatic compasses                                                                                                            | hourly readings + six-minute readings three days per month (synchronized with other stations), for five months                                                      |
-| Meteorology        | mercury thermometers; spirit instruments; mercury and aneroid barometers; Regnault's apparatus; Robinson's anemometer; Casella's current-meter; rain gauge; black-bulb and *in-vacuo* thermometers | three-hourly observations while traveling, and one-hourly while wintered; lack of detectable electrical activity in the aurora borealis; most records saved         |
-| Ocean physics      | tide gauge                                                                                                                                                                                         | limits of Gulf Stream west of Greenland; *Protobathybius robesonii*; few soundings; specimens of water lost                                                         |
-| Zoology and botany |                                                                                                                                                                                                    | collections nearly completely lost;[^6] for observations see below                                                                                                  |
+| Field of study | Instrumentation | Findings/notes |
+|----|----|----|
+| Astronomy | Würdemann transit; Gambey sextants; box and pocket chronometers; pendulum | latitude and longitude of transit station; most records lost |
+| Geology |  | rising of land deduced from fossils;[^5] south-to-north geologic drift in Greenland; Davis Strait once flowed in the opposite direction; most geologic samples lost |
+| Magnetism | unifilar declinometer; dip circle with Lloyd's needles; theodolite; prismatic compasses | hourly readings + six-minute readings three days per month (synchronized with other stations), for five months |
+| Meteorology | mercury thermometers; spirit instruments; mercury and aneroid barometers; Regnault's apparatus; Robinson's anemometer; Casella's current-meter; rain gauge; black-bulb and *in-vacuo* thermometers | three-hourly observations while traveling, and one-hourly while wintered; lack of detectable electrical activity in the aurora borealis; most records saved |
+| Ocean physics | tide gauge | limits of Gulf Stream west of Greenland; *Protobathybius robesonii*; few soundings; specimens of water lost |
+| Zoology and botany |  | collections nearly completely lost;[^6] for observations see below |
 
 [^5]: Fossils of driftwood and molluscs were found at elevations of 1,800 feet; Bessels' deduction shows that he held uniformitarian views [@natureResultsPolarisArctic1875]. Interestingly, in the same passage, Bessels (paraphrased by editors) claims also to have found marine crustaceans living in Greenlandic fresh water bodies, as further evidence of gradual elevation. It is unclear whether this was truly the case or Bessels misunderstood either the organisms or the aquatic environment.
 
@@ -143,20 +143,20 @@ In his published account, @besselsPolarisChiefScientist2016 does not provide a s
 
 [^10]: @besselsPolarisChiefScientist2016, p. 593.
 
-| Scientific name used by Bessels (2016) | Current scientific name[^11] (where different) | Common name     |
-|------------------------|------------------------------|------------------|
-| *Ursus maritimus* L.                   |                                                | polar bear      |
-| *Canis lagopus* L.                     | *Alopex lagopus*                               | arctic fox      |
-| *Phoca groenlandica* Müller            |                                                | harp seal       |
-| *Phoca hispida* Erxleben               | *Pusa hispida*                                 | ringed seal     |
-| *Phoca barbata* Müller                 | *Erignathus barbatus*                          | bearded seal    |
-| *Lepus glacialis* Leach                | *Lepus arcticus*                               | arctic hare     |
-| *Myodes torquatus* Pallas              | *Dicrostonyx torquatus*                        | lemming         |
-| *Ovibos moschatus* Zimmermann          |                                                | muskox          |
-| *Lagopus* *spp.*                       |                                                | ptarmigan       |
-| *Sterna macroura* Naum.                | *Sterna paradisaea*                            | arctic tern     |
-| *Bernicla brenta* Pall.                | *Branta bernicla*                              | brent goose     |
-| *Uria grylle* L.                       | *Cepphus grille*                               | black guillemot |
+| Scientific name used by Bessels (2016) | Current scientific name[^11] (where different) | Common name |
+|----|----|----|
+| *Ursus maritimus* L. |  | polar bear |
+| *Canis lagopus* L. | *Alopex lagopus* | arctic fox |
+| *Phoca groenlandica* Müller |  | harp seal |
+| *Phoca hispida* Erxleben | *Pusa hispida* | ringed seal |
+| *Phoca barbata* Müller | *Erignathus barbatus* | bearded seal |
+| *Lepus glacialis* Leach | *Lepus arcticus* | arctic hare |
+| *Myodes torquatus* Pallas | *Dicrostonyx torquatus* | lemming |
+| *Ovibos moschatus* Zimmermann |  | muskox |
+| *Lagopus* *spp.* |  | ptarmigan |
+| *Sterna macroura* Naum. | *Sterna paradisaea* | arctic tern |
+| *Bernicla brenta* Pall. | *Branta bernicla* | brent goose |
+| *Uria grylle* L. | *Cepphus grille* | black guillemot |
 
 [^11]: These are given in the endnotes by the translator and editor, William Barr.
 
@@ -257,14 +257,14 @@ Inuit guides were evidently valuable expedition members: they had survival skill
 
 Examples of tidbits of information that Ipirvik supplies to Bessels abound:
 
--   Some Inuit calls used in different regions (p. 158)
--   How to identify and train sledge dogs (p. 161)
--   Droppings at least a summer old, probably of a wolf (p. 181)
--   "Joseph was the only one among us who had hunted muskoxen before. We left the attack to him" (p. 186).
--   A location where Ipirvik had previously found muskoxen horn fragments, indicating past muskox presence there (p. 190)
--   Only the nose, forehead, and horns of a swimming muskox are visible (p. 191).
--   The first black guillemots of the year (p. 268)
--   Snowy owls hiss into lemming burrows to lure them out (p. 298).
+- Some Inuit calls used in different regions (p. 158)
+- How to identify and train sledge dogs (p. 161)
+- Droppings at least a summer old, probably of a wolf (p. 181)
+- "Joseph was the only one among us who had hunted muskoxen before. We left the attack to him" (p. 186).
+- A location where Ipirvik had previously found muskoxen horn fragments, indicating past muskox presence there (p. 190)
+- Only the nose, forehead, and horns of a swimming muskox are visible (p. 191).
+- The first black guillemots of the year (p. 268)
+- Snowy owls hiss into lemming burrows to lure them out (p. 298).
 
 Bessels grants attribution to Ipirvik in these many cases.
 
