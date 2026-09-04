@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Dominic Bordelon">
+<meta name="dcterms.date" content="2026-09-03">
 
-<title>Projects – Dominic Bordelon</title>
+<title>Translating metadata across biomedical data repositories – Dominic Bordelon</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +28,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-de60624a5cb141114e0ea2b9bc293073.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-de60624a5cb141114e0ea2b9bc293073.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,77 +75,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Dominic Bordelon</span>
     </a>
   </div>
@@ -153,15 +101,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resume.html"> 
+    <a class="nav-link" href="../../resume.html"> 
 <span class="menu-text">Resume</span></a>
   </li>  
 </ul>
@@ -186,256 +134,130 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Projects</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Translating metadata across biomedical data repositories</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">open science</div>
+                <div class="quarto-category">research software engineering</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Dominic Bordelon </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 3, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Y3JlYXRpbmclMjBlZHVjYXRpb25hbCUyMGNvbnRlbnQ=">creating educational content <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b3BlbiUyMHNjaWVuY2U=">open science <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmVzZWFyY2glMjBzb2Z0d2FyZSUyMGVuZ2luZWVyaW5n">research software engineering <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dGVhY2hpbmc=">teaching <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>As part of my work as a Data Curator for NIH-funded consortial data repositories <a href="https://hubmapconsortium.org/">HuBMAP</a> and <a href="https://sennetconsortium.org/">SenNet</a>, I am charged with “translating” the information (metadata) about our datasets to other knowledgebases operated by NIH.</p>
+<p>What does this mean, and for what purpose?</p>
+<p>It means that our repositories describe the world in one way, while the target repositories describe it in a different way. In order for our datasets to be compatible with the target repository, and maintain the rich, scientifically useful information we have curated, I must understand both ways of describing the data, and apply the appropriate labels for the target repository. This ensures that the target repository’s records are accurate: consistent with our own records and a faithful representation of reality.</p>
+<p>An example to explain this concept can be seen in the various vocabulary terms each repository uses to describe library strategy.</p>
+<table class="caption-top table">
+<caption>Library strategy terms for five biomedical data repostories.</caption>
+<thead>
+<tr class="header">
+<th>Repository</th>
+<th>Local term</th>
+<th>Sample of allowed values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>HuBMAP / SenNet</td>
+<td>dataset_type</td>
+<td>ATACseq, ATACseq-bulk, bulk-RNA, RNAseq, sciATACseq, snATACseq, WGS, MUSIC</td>
+</tr>
+<tr class="even">
+<td><a href="https://commonfund.nih.gov/dataecosystem">Common Fund Data Ecosystem (CFDE)</a> Cross-cut Metadata</td>
+<td>assay_type</td>
+<td>bulk assay for transposase-accessible chromatin using sequencing, transcription profiling by RNA sequencing assay, single cell combinatorial indexing assay for transposase-accessessable chromatin using sequencing, single-nucleus ATAC-seq, whole genome sequencing assay, sequencing assay</td>
+</tr>
+<tr class="odd">
+<td><a href="https://dbgap.ncbi.nlm.nih.gov/home/">Database of Genotypes and Phenotypes (dbGaP)</a></td>
+<td>library_strategy</td>
+<td>ATAC-seq, RNA-seq, WGS, OTHER</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.ncbi.nlm.nih.gov/geo/index.cgi">Gene Expression Omnibus (GEO)</a></td>
+<td>library_strategy</td>
+<td>ATAC-seq, scATAC-seq, RNA-Seq, scRNA-Seq, miRNA-Seq, ncRNA-Seq</td>
+</tr>
+</tbody>
+</table>
+<p>Comparing some of the terms across repositories, we see spelling differences (e.g., <code>RNAseq</code> vs.&nbsp;<code>RNA-seq</code> vs.&nbsp;<code>RNA-Seq</code>) but also different levels of granularity—for example, single-nucleus ATACseq (snATACseq) vs.&nbsp;dbGaP’s generic “ATAC-seq” (which may correspond to bulk, single-cell, or single-nucleus ATACseq). We see that some terms like MUSIC (Multi-subject Single-cell deconvolution) can only be represented as OTHER in dbGaP. And the CFDE terms actually come from the <a href="https://obi-ontology.org/">Ontology for Biomedical Investigations (OBI)</a>, which means this ontology must be understood and the appropriate identifiers used (e.g., the code for “transcription profiling by RNA sequencing assay” is <a href="http://purl.obolibrary.org/obo/OBI_0001271"><code>OBI:0001271</code></a>).</p>
+<p>Assay type (AKA library strategy) is not the only controlled term for these target repositories. Other examples of properties with controlled vocabularies include file format (from <a href="https://edamontology.org/">EDAM</a>), subject ethnicity, anatomy (from <a href="https://obophenotype.github.io/uberon/">UBERON</a>), library source (genomic, transcriptomic, etc.), library layout (single- or paired-end), and instrument manufacturer and model (e.g., Illumina NextSeq 5000).</p>
+<p>For each controlled field in the target repository, I must develop a term mapping or “crosswalk.” This looks like table with two columns, with the term from repo A and the corresponding, equivalent term in repo B. Sometimes these require consultation with experts. Other times, an automatic mapping may be impossible because the target vocabulary may be more granular, requiring some manual intervention to determine the appropriate term choice.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    n1["Local knowledgebase (A) records"] -- HTTP API --&gt; n3["Fetched table"]
+    n3 --&gt; n5["Translated table"]
+    n5 -- submission process --&gt; n4["Target knowledgebase (B) records"]
+    n2["Term mapping (A:B)"] -- left join --&gt; n5
+
+    n1@{ shape: rounded}
+    n3@{ shape: rounded}
+    n5@{ shape: rounded}
+    n4@{ shape: rounded}
+    n2@{ shape: rounded}
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>To apply the term mapping in the context of a Jupyter notebook with Pandas, we load the mapping table as a DataFrame, and then apply a left join on the table of datasets. (Doing this task relationally, rather than with <code>Series.map()</code> with a dict or similar, should be more performant and scalable, as well as easier to maintain, since mappings are stored as CSV files.) The result is that the dataset table now has the mapped column added, with the appropriate (mapped) value for each row. The local version of the column may then be dropped from the table. This process is repeated for all columns needing mapping. After all needed manipulations, the record set may be submitted to the target repository and should pass their validation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/term-mapping-notebook.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Example of left-joining the file manifest table with a term mapping for CFDE’s C2M2.file.data_type column."><img src="images/term-mapping-notebook.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Example of left-joining the file manifest table with a term mapping for CFDE’s C2M2.file.data_type column."></a></p>
+</figure>
+</div>
+<figcaption>Example of left-joining the file manifest table with a term mapping for CFDE’s C2M2.file.data_type column.</figcaption>
+</figure>
+</div>
+<p>What is the utility of these translations? The immediate answer is that they allow interoperability between repositories with minimal loss of information. (Our goal is always to avoid information being “lost in translation,” while taking account of how a schema forces us to describe records.) But the bigger answer depends on the reason(s) we are submitting to the target repository, for example:</p>
+<ul>
+<li><p>increasing discoverability of our data</p></li>
+<li><p>complying with funders’ reporting requirements</p></li>
+<li><p>making sensitive, HIPAA-protected human genetic sequencing data available via the appropriate NIH-operated secure enclave (dbGaP)</p></li>
+</ul>
+<p>For any of these applications to succeed, translation across heterogeneous information schemata is necessary.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="b3BlbiUyMHNjaWVuY2UlMkNyZXNlYXJjaCUyMHNvZnR3YXJlJTIwZW5naW5lZXJpbmc=" data-listing-date-sort="1788408000000" data-listing-file-modified-sort="1788495003458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="769">
-<div class="thumbnail"><a href="./posts/translating_biomed_metadata/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/translating_biomed_metadata/images/translation-flow.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/translating_biomed_metadata/index.html" class="no-external">Translating metadata across biomedical data repositories</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHNjaWVuY2U='); return false;">open science</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2glMjBzb2Z0d2FyZSUyMGVuZ2luZWVyaW5n'); return false;">research software engineering</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/translating_biomed_metadata/index.html" class="no-external">
-As part of my work as a Data Curator for NIH-funded consortial data repositories HuBMAP and SenNet, I am charged with “translating” the information (metadata) about our…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/translating_biomed_metadata/index.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2026
-</div>
-<div class="listing-author">
-Dominic Bordelon
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Y3JlYXRpbmclMjBlZHVjYXRpb25hbCUyMGNvbnRlbnQ=" data-listing-date-sort="1711425600000" data-listing-file-modified-sort="1788454090220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="567">
-<div class="thumbnail"><a href="./posts/wikipedia_contrib_vol1/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/wikipedia_contrib_vol1/LTopo_Miss_Alluvial_Plain.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/wikipedia_contrib_vol1/index.html" class="no-external">Wikipedia Contibutions (vol.&nbsp;1)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JlYXRpbmclMjBlZHVjYXRpb25hbCUyMGNvbnRlbnQ='); return false;">creating educational content</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/wikipedia_contrib_vol1/index.html" class="no-external">
-A recent passion project in my free time has been contributing to Wikipedia. In doing some pleasure nonfiction reading about my home state, Louisiana, I found that there was…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/wikipedia_contrib_vol1/index.html" class="no-external">
-<div class="listing-date">
-Mar 26, 2024
-</div>
-<div class="listing-author">
-Dominic Bordelon
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="YW5hbHlzaXM=" data-listing-date-sort="1706936400000" data-listing-file-modified-sort="1788288633337" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
-<div class="thumbnail"><a href="./posts/modeling_gentrification/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/modeling_gentrification/F_delta.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/modeling_gentrification/index.html" class="no-external">Predictively Modeling Gentrification in Pittsburgh</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/modeling_gentrification/index.html" class="no-external">
-This item is developed as a Jupyter notebook, also embedded below.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/modeling_gentrification/index.html" class="no-external">
-<div class="listing-date">
-Feb 3, 2024
-</div>
-<div class="listing-author">
-Dominic Bordelon
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="dGVhY2hpbmc=" data-listing-date-sort="1696910400000" data-listing-file-modified-sort="1788454032258" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<div class="thumbnail"><a href="./posts/panther_git/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/panther_git/git-diagram.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/panther_git/index.html" class="no-external">Panther Git: slides for teaching Git and GitHub</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGVhY2hpbmc='); return false;">teaching</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/panther_git/index.html" class="no-external">
-I teach Git and GitHub in two, 2-hour workshops. These are the slides. It’s called Panther Git because the university mascot is the panther.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/panther_git/index.html" class="no-external">
-<div class="listing-date">
-Oct 10, 2023
-</div>
-<div class="listing-author">
-Dominic Bordelon
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="YW5hbHlzaXM=" data-listing-date-sort="1651723200000" data-listing-file-modified-sort="1788454054092" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5123">
-<div class="thumbnail"><a href="./posts/taqulittuq_polaris/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/taqulittuq_polaris/wildlife.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/taqulittuq_polaris/index.html" class="no-external">Taqulittuq and the <em>Polaris</em>: Indigenous Contributions in Arctic Exploration</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/taqulittuq_polaris/index.html" class="no-external">
-In popular (and even academic) imagination, historical narratives of exploration have tended to follow a “great man” pattern in which one person (invariably male) bears sole…<em></em><em></em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/taqulittuq_polaris/index.html" class="no-external">
-<div class="listing-date">
-May 5, 2022
-</div>
-<div class="listing-author">
-Dominic Bordelon
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="cmVzZWFyY2glMjBzb2Z0d2FyZSUyMGVuZ2luZWVyaW5nJTJDb3BlbiUyMHNjaWVuY2U=" data-listing-date-sort="1567310400000" data-listing-file-modified-sort="1788454010460" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
-<div class="thumbnail"><a href="./posts/distributed_peer_review/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/distributed_peer_review/dpr.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/distributed_peer_review/index.html" class="no-external">The ESO Distributed Peer Review Experiment</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2glMjBzb2Z0d2FyZSUyMGVuZ2luZWVyaW5n'); return false;">research software engineering</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHNjaWVuY2U='); return false;">open science</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/distributed_peer_review/index.html" class="no-external">
-The European Southern Observatory builds, maintains, and operates ground-based telescopes. Their flagship facility since 1999 has been the Very Large Telescope (VLT), which…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/distributed_peer_review/index.html" class="no-external">
-<div class="listing-date">
-Sep 1, 2019
-</div>
-<div class="listing-author">
-Dominic Bordelon
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="YW5hbHlzaXM=" data-listing-date-sort="1504238400000" data-listing-file-modified-sort="1788454039960" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="483">
-<div class="thumbnail"><a href="./posts/scientific_return_vlt_instruments/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/scientific_return_vlt_instruments/vlt-citations.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/scientific_return_vlt_instruments/index.html" class="no-external">Scientific Return of Very Large Telescope (VLT) Instruments</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/scientific_return_vlt_instruments/index.html" class="no-external">
-The European Southern Observatory builds, maintains, and operates ground-based telescopes. Their flagship facility since 1999 has been the Very Large Telescope (VLT), which…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/scientific_return_vlt_instruments/index.html" class="no-external">
-<div class="listing-date">
-Sep 1, 2017
-</div>
-<div class="listing-author">
-Dominic Bordelon
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -837,6 +659,38 @@ Dominic Bordelon
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
