@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dominic Bordelon">
-<meta name="dcterms.date" content="2026-09-03">
+<meta name="dcterms.date" content="2026-06-03">
 
 <title>Translating metadata across biomedical data repositories – Dominic Bordelon</title>
 <style>
@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 3, 2026</p>
+        <p class="date">June 3, 2026</p>
       </div>
     </div>
     
@@ -214,12 +214,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Comparing some of the terms across repositories, we see spelling differences (e.g., <code>RNAseq</code> vs.&nbsp;<code>RNA-seq</code> vs.&nbsp;<code>RNA-Seq</code>) but also different levels of granularity—for example, single-nucleus ATACseq (snATACseq) vs.&nbsp;dbGaP’s generic “ATAC-seq” (which may correspond to bulk, single-cell, or single-nucleus ATACseq). We see that some terms like MUSIC (Multi-subject Single-cell deconvolution) can only be represented as OTHER in dbGaP. And the CFDE terms actually come from the <a href="https://obi-ontology.org/">Ontology for Biomedical Investigations (OBI)</a>, which means this ontology must be understood and the appropriate identifiers used (e.g., the code for “transcription profiling by RNA sequencing assay” is <a href="http://purl.obolibrary.org/obo/OBI_0001271"><code>OBI:0001271</code></a>).</p>
 <p>Assay type (AKA library strategy) is not the only controlled term for these target repositories. Other examples of properties with controlled vocabularies include file format (from <a href="https://edamontology.org/">EDAM</a>), subject ethnicity, anatomy (from <a href="https://obophenotype.github.io/uberon/">UBERON</a>), library source (genomic, transcriptomic, etc.), library layout (single- or paired-end), and instrument manufacturer and model (e.g., Illumina NextSeq 5000).</p>
 <p>For each controlled field in the target repository, I must develop a term mapping or “crosswalk.” This looks like table with two columns, with the term from repo A and the corresponding, equivalent term in repo B. Sometimes these require consultation with experts. Other times, an automatic mapping may be impossible because the target vocabulary may be more granular, requiring some manual intervention to determine the appropriate term choice.</p>
-<div class="cell" data-layout-align="default">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart LR
+<pre class="mermaid mermaid-js">flowchart
     n1["Local knowledgebase (A) records"] -- HTTP API --&gt; n3["Fetched table"]
     n3 --&gt; n5["Translated table"]
     n5 -- submission process --&gt; n4["Target knowledgebase (B) records"]

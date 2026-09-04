@@ -1,7 +1,7 @@
 ---
 title: "Translating metadata across biomedical data repositories"
 author: "Dominic Bordelon"
-date: "2026-09-03"
+date: "2026-06-03"
 categories: [open science, research software engineering]
 image: "images/translation-flow.png"
 filters: 
@@ -33,7 +33,8 @@ Assay type (AKA library strategy) is not the only controlled term for these targ
 For each controlled field in the target repository, I must develop a term mapping or "crosswalk." This looks like table with two columns, with the term from repo A and the corresponding, equivalent term in repo B. Sometimes these require consultation with experts. Other times, an automatic mapping may be impossible because the target vocabulary may be more granular, requiring some manual intervention to determine the appropriate term choice.
 
 ```{mermaid}
-flowchart LR
+%%| fig-align: "center"
+flowchart
     n1["Local knowledgebase (A) records"] -- HTTP API --> n3["Fetched table"]
     n3 --> n5["Translated table"]
     n5 -- submission process --> n4["Target knowledgebase (B) records"]
