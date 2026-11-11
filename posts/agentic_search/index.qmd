@@ -1,0 +1,234 @@
+---
+title: "Using AI Agents to Bridge Complex Research Data Systems"
+author: "Dominic Bordelon"
+date: "2026-10-10"
+categories: [open science, research software engineering]
+#image: "images/translation-flow.png"
+filters: 
+  - lightbox
+lightbox: auto
+---
+
+## Overview
+
+Modern research repositories contain enormous amounts of valuable data, but accessing that information often requires navigating complex APIs, understanding specialized query structures, and writing custom code before any meaningful analysis can begin.
+
+While working with biomedical research repositories, I frequently used repository APIs to create reports, identify datasets of interest, perform metadata quality reviews, and develop downstream data transformation workflows. Although the APIs were powerful, constructing the required JSON queries by hand was often tedious and error-prone. Even relatively simple questions could require carefully structured search requests and detailed knowledge of repository-specific schemas.
+
+To address this challenge, I developed two AI-powered agent skills that translate natural-language requests into executable repository queries:
+
+- [HuBMAP Data Search Skill](https://github.com/djbordelon/hubmap-data-search-skill)
+- [SenNet Data Search Skill](https://github.com/djbordelon/sennet-data-search-skill)
+
+Together, these projects demonstrate how AI can make complex information systems more accessible while preserving transparency, reproducibility, and data quality.
+
+## The Problem
+
+Both the [Human BioMolecular Atlas Program (**HuBMAP**)](https://hubmapconsortium.org/) and [Cellular Senescence Network (**SenNet**)](https://sennetconsortium.org/) repositories expose rich metadata through REST APIs and structured search endpoints (using [ElasticSearch](https://www.elastic.co/elasticsearch)). While these systems support sophisticated querying capabilities, effective use typically requires understanding:
+
+- repository-specific metadata models
+- controlled vocabularies
+- JSON query structures
+- filtering logic
+- API endpoints and parameters
+- relationships among entities such as donors, samples, datasets, assays, and publications
+
+As a result, many users face a gap between the questions they want to ask and the technical knowledge required to retrieve answers.
+
+For example, a researcher might ask:
+
+> Show me kidney datasets generated using imaging mass spectrometry.
+
+A repository expert can translate that request into an API query. Many users cannot.
+
+My goal was to create a reusable interface that would allow users to describe what they needed in natural language while automatically generating repository-compliant queries behind the scenes.
+
+## Inspiration
+
+I was first exposed to agent-based development during a professional [Agricultural Data Analytics course](https://elvtr.com/course/agricultural-data-analytics-course). In that course, AI agents were used to accelerate the development of dashboards, reports, repositories, data products, and decision-support tools built from real agricultural data.
+
+What interested me most was not simply using AI to generate content, but using agents as a translation layer between users and complex technical systems.
+
+That concept immediately reminded me of challenges I encountered in repository and metadata work. Much of data stewardship involves translating:
+
+- user questions into technical requirements
+- technical structures into understandable concepts
+- metadata standards into practical workflows
+
+The repository-search problem provided an opportunity to explore whether those same principles could be embedded within an AI-assisted workflow.
+
+## Development Process
+
+The first version focused on HuBMAP.
+
+### Phase 1: Repository Understanding
+
+Before building the skill itself, I documented the repository's search capabilities, metadata model, query structure, and API behavior.
+
+This required identifying:
+
+- searchable fields
+- supported filters
+- expected JSON structures
+- common user questions
+- repository-specific terminology
+
+The resulting documentation became the foundation of [the skill's instructions and examples](https://github.com/djbordelon/hubmap-data-search-skill/blob/main/SKILL.md).
+
+### Phase 2: Query Translation
+
+The next step involved teaching the agent how to convert natural-language requests into valid repository queries.
+
+Rather than returning free-form responses, the skill was designed to produce structured, reproducible outputs that users could directly execute against repository services.
+
+This emphasized an important principle:
+
+> AI should generate transparent and inspectable queries rather than functioning as a black box.
+
+Users could always review exactly how a search had been constructed.
+
+### Phase 3: Validation and Iteration
+
+Once the core workflow worked, development shifted toward testing edge cases and improving reliability.
+
+This involved refining the skill's ability to:
+
+- interpret user intent
+- recognize repository terminology
+- handle ambiguous requests
+- apply appropriate filters
+- avoid invalid query structures
+
+The process was iterative and heavily informed by real-world repository use cases.
+
+Returning to our natural-language example:
+
+> Show me kidney datasets generated using imaging mass spectrometry.
+
+yields an initial response, some notes and clarifying questions. After my responses, this is what the final JSON query looks like:
+
+```         
+{
+  "query": {
+    "bool": {
+      "filter": [
+        {"term": {"entity_type.keyword": "Dataset"}},
+        {"term": {"status.keyword": "Published"}},
+        {"terms": {"creation_action.keyword": ["Create Dataset Activity", "Multi-Assay Split"]}},
+        {"terms": {"origin_samples.organ.keyword": ["LK", "RK"]}},
+        {"terms": {"dataset_type.keyword": ["MALDI", "DESI"]}}
+      ]
+    }
+  },
+  "_source": [
+    "hubmap_id",
+    "title",
+    "group_name",
+    "dataset_type",
+    "creation_action",
+    "status",
+    "published_timestamp",
+    "origin_samples.organ"
+  ],
+  "from": 0,
+  "size": 5000
+}
+```
+
+This query can be further modified with additional filters or different fields in the returned results. The query can be pasted into an API tool like [Postman](https://www.postman.com/), or a Python notebook, or software code, among other destinations. Or the agent can directly make the API request itself, and return a table (or summarized results) in the agent interface, and/or a CSV file of the result records.
+
+### Phase 4: Generalization
+
+After the HuBMAP version proved successful, I adapted the approach for SenNet.
+
+Although the repositories share broad similarities, each has its own metadata structures, naming conventions, and search patterns. Supporting both repositories required separating repository-specific details from the higher-level workflow.
+
+This reinforced an important lesson from data management and governance work:
+
+> Standards, workflows, and abstractions are often more reusable than implementations.
+
+## Technical Components
+
+These projects combined several areas of technical and information-management practice:
+
+### Data Management
+
+- metadata modeling
+- controlled vocabularies
+- data discovery
+- repository architecture
+- [FAIR data principles](https://www.gofair.foundation/fair-principles)
+
+### Software and Automation
+
+- REST APIs
+- ElasticSearch JSON query construction
+- workflow automation
+- prompt engineering
+- agent design
+
+### Quality Assurance
+
+- query validation
+- reproducibility
+- error reduction
+- metadata consistency
+
+### User Experience
+
+- natural-language interfaces
+- technical translation
+- documentation
+- reducing barriers to access
+
+## Outcomes
+
+The resulting skills allow users to interact with complex repository metadata systems using natural language instead of manually constructing detailed API requests.
+
+More broadly, the projects demonstrate how AI can be used to:
+
+- reduce repetitive technical work
+- improve access to information systems
+- make specialized data resources more discoverable
+- support reproducible workflows
+- bridge communication gaps between users and technical infrastructure
+
+While originally developed for biomedical research repositories, the underlying approach is applicable to many domains that rely on structured metadata and complex search systems.
+
+Examples include:
+
+- digital archives
+- knowledge bases
+- enterprise data catalogs
+- governance platforms
+- asset management systems
+- environmental data repositories
+- business intelligence platforms
+
+## Skills Demonstrated
+
+This project showcases experience with:
+
+- AI agent design
+- agentic workflows
+- prompt engineering
+- metadata management
+- data governance concepts
+- information architecture
+- REST APIs
+- JSON-based query systems
+- data discovery
+- stakeholder-focused solution design
+- technical documentation
+- workflow automation
+- repository platforms
+- quality assurance and validation
+- translating business and research needs into technical solutions
+
+## Reflections
+
+What began as a simple effort to avoid writing repetitive JSON search requests evolved into a broader exploration of how AI can make complex information systems more accessible and useful.
+
+The most valuable lesson was not that AI can generate queries. It was that effective AI systems depend on the same foundations that support good data stewardship: clear metadata, well-defined standards, transparent processes, and reliable validation.
+
+As organizations increasingly adopt AI-enabled tools, these projects reinforced my belief that successful automation depends as much on information management and data quality as it does on the models themselves.
