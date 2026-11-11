@@ -18,7 +18,7 @@ I was allowed to use any available tool, so I chose [ggplot2](https://ggplot2.ti
 In addition to the specific requirement(s) to be met in each plot, I imposed my own professional requirements on all of the work as well:
 
 - adhering to [data visualization best practices](https://clauswilke.com/dataviz/) and especially avoiding pitfalls
-- [colorblind-friendly](https://clauswilke.com/dataviz/color-pitfalls.html#not-designing-for-color-vision-deficiency) (I prefer the Viridis palettes)
+- [colorblind-friendly](https://clauswilke.com/dataviz/color-pitfalls.html#not-designing-for-color-vision-deficiency) (I prefer the [Viridis palettes](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html))
 - legible and sufficiently labeled
 - image ratio similar to presentation slide (16:9), to utilize screen area as much as possible while presenting on Zoom
 
